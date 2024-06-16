@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="principal">
+        <h1>Esto es el catalogo</h1>
+        <% for(let i = 0; i < peliculas.length; i++){ %>
+            <img src="<%= peliculas[i].portada %>" alt="">
+            <p><%= peliculas[i].nombre_pelicula %></p>
+            <p><%= peliculas[i].descripcion %></p>
+            <p><%= peliculas[i].precio %></p>
+            <p>Comprar</p>
+        <% } %> 
+    </section>
+</body>
+</html>

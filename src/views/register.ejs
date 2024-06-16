@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        #principal{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            align-self: center;
+            background: linear-gradient(to right, rgb(190, 18, 60), rgb(219, 39, 119));
+        }
+        #menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 30%;
+            width: 50%;
+            text-align: center;
+            margin-top: 5%;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <section id="principal">
+        <div id="menu">
+            <form action="/register" method="post">
+                <input autofocus type="text" placeholder="Inserte su nombre de usuario" name="nombre_usuario">
+                <input type="email" placeholder="Inserte su correo electronico" name="email">
+                <input type="password" placeholder="Inserte su contrasenya" name="passwd">
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

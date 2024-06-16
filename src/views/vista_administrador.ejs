@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="principal">
+        <h1>Vista del admin</h1>
+        <form action="/login" method="get">
+            <input type="submit" value="Cerrar Sesion">
+        </form>
+        <form action="/vista_administrador" method="post">
+            <input type="submit" value="Agregar Pelicula">
+        </form>
+
+        <% for(let i = 0; i < peliculas.length; i++){ %>
+            <img src="<%= peliculas[i].portada %>" alt="">
+            <p><%= peliculas[i].nombre_pelicula %></p>
+            <p><%= peliculas[i].descripcion %></p>
+            <p><%= peliculas[i].precio %></p>
+            <form action="/vista_administrador/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTc4MDAzMTF9.oWf9qBa-IP0jMCWKwdgNspyOnH4EW4D_-HEYwG2yscc" method="post">
+                <input type="hidden" name="id_pelicula" value="<%= peliculas[i].id %>">
+                <input type="submit" value="Eliminar Pelicula">
+            </form>
+            <form action="/editar_peli" method="post">
+                <input type="submit" value="Editar Pelicula">
+            </form>
+        <% } %> 
+    </section>
+</body>
+</html>
